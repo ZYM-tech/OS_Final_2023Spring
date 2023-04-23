@@ -14,9 +14,9 @@ Yes, It's in safe state.
 One possible work sequence is P0 -> P2 -> P1 -> P3 -> P4
 
 ## Q2: Create a nodejs code which implements a get method where you send "Hello {Name}" as the body and the response body is "Welcome {Name}"?
-### 
 ```
 const express = require('express');
+const port = 3000;
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -29,14 +29,14 @@ app.get('', (req, res) => {
   if (name) {
     res.send("Welcome " + name + "\n");
   } else {
-    res.end("Hello World \n");
+    res.end("Hello！\n");
   }
 });
 
-const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
 // http://localhost:3000/?name=YimingZhang
 ```
 
@@ -68,7 +68,7 @@ P1: 8 - 0 = 8,
 P2: 12 - 0.4 = 11.6,  
 P3: 13 - 1 = 12. 
 ### The average turnaround time: 
-(8 + 11.6 + 12) / 3 = 10.2 
+(8 + 11.6 + 12) / 3 = 10.53 
 
 
 ## Q7：Bank System
